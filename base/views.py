@@ -14,6 +14,3 @@ from .models import *
 def home(request):
     print()
     return render(request, 'index.html')
-def home(request):
-    print()
-    return render(request, 'index.html')
