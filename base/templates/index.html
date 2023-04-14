@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}PFonos Details{% endblock %}
+
+{% block content %}
+{% load static %}
+
+
+
+
+
+  
+<div class=" w-full">
+  <div class="hero min-h-screen bg-base-200">
+    <div class="hero-overlay bg-opacity-60"></div>
+    <div class="hero-content text-center text-neutral-content">
+      <div class="">
+        <h1 class="text-5xl font-bold">Welcome to our platform!</h1>
+        <p class="mt-12">Here at Marco Ramirez's portfolio, we are dedicated to using cutting-edge technologies to provide exceptional experiences. Our backend is powered by Django and DRF, which enables us to deliver highly scalable and available web applications. We also use various database engines such as SQL Server, MySQL, and PostgreSQL to ensure the security and efficiency of your data. Our expertise includes data management, data libraries such as Pandas, AI, front-end development, data analysis, and web development. In our portfolio, we provide detailed documentation and step-by-step tutorials so you can integrate these skills into real-life challenges. Through this portfolio, I can showcase my relevant skills and experiences in my professional career. I am excited to share my portfolio with you and hope it allows you to get to know me better. Thank you for considering me!</p>
+        <div class="flex flex-wrap mt-4 justify-center">
+          <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+              <div class="col-span-1 flex items-center justify-center md:col-span-2 lg:col-span-1">
+                <div>
+                  <img src="{% static 'img/python.png' %}" alt="Logo de Python">
+                </div>
+              </div>
+
+              <div class="col-span-1 flex items-center justify-center md:col-span-2 lg:col-span-1">
+                <div>
+                  <img src="{% static 'img/django.png' %}" alt="Logo de Python">
+                </div>
+              </div>
+
+              <div class="col-span-1 flex items-center justify-center md:col-span-2 lg:col-span-1">
+                <div>
+                  <img src="{% static 'img/jwt.png' %}" alt="Logo de Python">
+                </div>
+              </div>
+
+              <div class="col-span-1 flex items-center justify-center md:col-span-3 lg:col-span-1">
+                <div>
+                  <img src="{% static 'img/drf.png' %}" alt="Logo de Python">
+                </div>
+              </div>
+
+              <div class="col-span-2 flex items-center justify-center md:col-span-3 lg:col-span-1">
+                <div>
+                  <img src="{% static 'img/postgre.png' %}" alt="Logo de Python">
+                </div>
+              </div>
+          </div>
+        </div>
+        <form action="{% url 'signup' %}">
+          <button class="btn mt-12 w-6/12 h-6 px-6">Get started</button>
+        </form>
+        
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+      
+      
+      
+      
+      
+      <!--- ignore the code below-->
+      
+
+      
+
+
+
+
+
+
+
+
+
+{% endblock %}

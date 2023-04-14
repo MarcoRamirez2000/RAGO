@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block title %}PFonos Details{% endblock %}
+
+{% block content %}
+{% load static %}
+
+
+<div class="hero min-h-screen bg-base-100 mt-0">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+      <div class="text-center lg:text-left">
+        <h1 class="text-5xl font-bold text-center mb-5">Signup</h1>
+        <p class="py-6 mt-1 font-semibold">Welcome to my portfolio! On our platform, we use JSON Web Tokens (JWT) for secure user authentication. JWT is an open standard used to securely transmit information between parties. To implement JWT in Django, we use PyJWT and Django Rest Framework (DRF). Additionally, we have implemented additional security measures, such as user input validation and protection against code injection attacks, to ensure the safety of our users.</p>
+        <div class="flex flex-wrap mt-4 justify-center">
+            <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+                <div class="col-span-1 flex items-center justify-center md:col-span-2 lg:col-span-1">
+                  <div>
+                    <img src="{% static 'img/python.png' %}" alt="Logo de Python">
+                  </div>
+                </div>
+
+                <div class="col-span-1 flex items-center justify-center md:col-span-2 lg:col-span-1">
+                  <div>
+                    <img src="{% static 'img/django.png' %}" alt="Logo de Python">
+                  </div>
+                </div>
+
+                <div class="col-span-1 flex items-center justify-center md:col-span-2 lg:col-span-1">
+                  <div>
+                    <img src="{% static 'img/jwt.png' %}" alt="Logo de Python">
+                  </div>
+                </div>
+
+                <div class="col-span-1 flex items-center justify-center md:col-span-3 lg:col-span-1">
+                  <div>
+                    <img src="{% static 'img/drf.png' %}" alt="Logo de Python">
+                  </div>
+                </div>
+
+                <div class="col-span-2 flex items-center justify-center md:col-span-3 lg:col-span-1">
+                  <div>
+                    <img src="{% static 'img/postgre.png' %}" alt="Logo de Python">
+                  </div>
+                </div>
+            </div>
+          </div>
+    </div>
+      <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div class="card-body">
+          <form method="POST" action="{% url 'signup' %}">
+            {% csrf_token %}
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Nombre</span>
+              </label>
+              <input type="text" placeholder="Nombre" name="first_name" class="input input-bordered" required />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Apellido</span>
+              </label>
+              <input type="text" placeholder="Apellido" name="last_name" class="input input-bordered" required />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Email</span>
+              </label>
+              <input type="email" placeholder="Email" name="email" class="input input-bordered" required />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Contraseña</span>
+              </label>
+              <input type="password" placeholder="Contraseña" name="password" class="input input-bordered" required />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Confirmar Contraseña</span>
+              </label>
+              <input type="password" placeholder="Confirmar Contraseña" name="re_password" class="input input-bordered" required />
+            </div>
+            <div class="form-control mt-6">
+              <button class="btn" type="submit">Registrar</button>
+              <span class="text-sm text-gray-600">You have an account? <a href="{% url 'login' %}" class="link link-hover">Login</a></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+
+
+{% endblock %}

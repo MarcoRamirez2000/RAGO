@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}PFonos Details{% endblock %}
+
+{% block content %}
+
+<body>
+    <h2>Fonos List</h2>
+    <table class="table table-striped table-dark">
+        <thead >
+            <tr>
+            <th scope="col">Ubicacion</th>
+            <th scope="col">FonoPrincipal</th>
+            <th scope="col">Usuario</th>
+ 
+            <th scope="col">Celular</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            {% for f in Fonos %}
+                <tr>
+                    <td>{{ f.ubicacion }}</td>
+                    <td>{{ f.celular }}</td>
+                    <td>{{ f.usuario_nombre }}</td>
+
+                    <td>{{ f.celular }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

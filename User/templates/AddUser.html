@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}PFonos Details{% endblock %}
+
+{% block content %}
+
+
+
+
+
+
+
+  
+  <form method="post">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label for="Username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="Username" name="Username" required>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="  Emailaddress: " class="form-label">  Email address: </label>
+        <input type="text" class="form-control" id="  Emailaddress " name="  Emailaddress " required>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="Celular" class="form-label">Celular</label>
+        <input type="number" class="form-control" id="Celular" name="Celular" required>
+      </div>
+
+    </div>
+    <div class="row">
+
+      <div class="col-md-4 mb-3">
+        <label for="Ubicacion" class="form-label">Ubicacion</label>
+        <input type="text" class="form-control" id="Ubicacion" name="Ubicacion" required>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <label for="Usuarionombre" class="form-label">Usuario Nombre</label>
+        <input type="text" class="form-control" id="Usuarionombre" name="Usuarionombre" required>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <label for="Usuarioapellido" class="form-label">Usuario Apellido</label>
+        <input type="text" class="form-control" id="Usuarioapellido" name="Usuarioapellido" required>
+      </div>
+
+    </div>
+    <div class="row">
+
+
+        <div class="col-md-4 mb-3">
+            <label for="Contraseña" class="form-label">Contraseña</label>
+            <input type="text" class="form-control" id="Contraseña" name="Contraseña" required>
+          </div>
+    
+          <div class="col-md-4 mb-3">
+            <label for="Confirmarcontraseña" class="form-label">Confirmar contraseña </label>
+            <input type="text" class="form-control" id="Confirmarcontraseña" name="Confirmarcontraseña" required>
+          </div>
+
+
+          <div class="col-md-4 mb-3 d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+          </div>
+          
+
+
+
+    </div>
+
+  </form>
+  
+  
+
+{% endblock %}
